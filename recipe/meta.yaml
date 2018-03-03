@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   detect_binary_files_with_prefix: true
 
@@ -23,7 +23,7 @@ requirements:
     - cmake
     - pkg-config
     - gcc
-    - hdf5 1.8.18|1.8.18.*
+    - hdf5 1.10.1
     - git
     - setuptools
     - numpy >=1.9
@@ -33,7 +33,7 @@ requirements:
   run:
     - libgcc
     - libgfortran
-    - hdf5 1.8.18|1.8.18.*
+    - hdf5 1.10.1
     - python >=2.7
     - six
     - numpy >=1.9
@@ -50,17 +50,16 @@ test:
     - openmc --version
 
 about:
-  home: http://openmc.readthedocs.io
+  home: https://openmc.readthedocs.io
   license: MIT
   license_file: LICENSE
   summary: 'OpenMC Monte Carlo Code'
   description: |
-    OpenMC is a Monte Carlo particle transport simulation code focused on
-    neutron criticality calculations. It is capable of simulating 3D models
-    based on constructive solid geometry with second-order surfaces. The
-    particle interaction data is based on ACE format cross sections, also
-    used in the MCNP and Serpent Monte Carlo codes.
-  doc_url: http://openmc.readthedocs.io
+    OpenMC is a 3D constructive solid geometry, continuous-energy Monte Carlo
+    particle transport code. Particle interaction data is based on HDF5 format
+    cross sections, and user input is given in an XML format or controlled
+    through the Python API.
+  doc_url: https://openmc.readthedocs.io
   dev_url: https://github.com/mit-crpg/openmc
 
 extra:
